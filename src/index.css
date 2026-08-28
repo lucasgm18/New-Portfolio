@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #f7f5f0;          /* Modern editorial paper off-white */
+  --bg-canvas-subtle: #ede9df;   /* Secondary warm surface */
+  --bg-canvas-card: #ffffff;     /* Crisp clean card */
+  --bg-canvas-dark-block: #121316;
+  --bg-canvas-dark-card: #18191e;
+  --text-primary: #18181b;       /* Deep graphite text */
+  --text-muted: #52525b;        /* Readable warm zinc text */
+  --text-subtle: #71717a;       /* Subtle text with WCAG AA compliance */
+  --border-color: rgba(24, 24, 27, 0.08); /* Precise subtle border */
+  --border-hover: rgba(24, 24, 27, 0.18);
+  --accent-color: #c83d00;       /* Terracota / warm burnt orange */
+  --accent-hover: #aa3400;
+  --accent-light: #fbeee7;
+}
+
+.dark {
+  --bg-canvas: #090a0c;
+  --bg-canvas-subtle: #131417;
+  --bg-canvas-card: #111215;
+  --bg-canvas-dark-block: #15161a;
+  --bg-canvas-dark-card: #1b1c21;
+  --text-primary: #f5f5f3;
+  --text-muted: #a3a39c;
+  --text-subtle: #73736c;
+  --border-color: #24252a;
+  --border-hover: #3d3e46;
+  --accent-color: #f25100;
+  --accent-hover: #ff6719;
+  --accent-light: rgba(242, 81, 0, 0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: var(--text-primary);
+    background-color: var(--bg-canvas);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+  
+  body {
+    overflow-x: hidden;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+}
+
+/* Technical dot background pattern - subtle editorial paper texture */
+.bg-grid-dots {
+  background-image: radial-gradient(rgba(24, 24, 27, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .bg-grid-dots {
+  background-image: radial-gradient(rgba(60, 62, 70, 0.6) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* Glass effect for header */
+.header-glass {
+  background-color: rgba(247, 245, 240, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .header-glass {
+  background-color: rgba(9, 10, 12, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
