@@ -3,7 +3,7 @@ import { ArrowDownRight, Terminal } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { uiTranslations } from '../data/translations';
 import { developerProfile } from '../data/portfolioData';
-import { TechCanvas } from './TechCanvas';
+import { HeroPhotoFrame } from './HeroPhotoFrame';
 
 export const Hero: React.FC = () => {
   const { language } = useApp();
@@ -91,12 +91,9 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Hero Right Column: Technical Architecture Panel */}
-          <div className="lg:col-span-5 relative">
-            <div className="absolute -top-3 -left-3 bg-accent/10 text-accent border border-accent/20 px-2 py-0.5 rounded text-[10px] font-mono z-10">
-              SYS.SPEC // ARCHITECTURE
-            </div>
-            <TechCanvas />
+          {/* Hero Right Column: Personal Photo Editorial Frame */}
+          <div className="lg:col-span-5 flex justify-center">
+            <HeroPhotoFrame />
           </div>
         </div>
 

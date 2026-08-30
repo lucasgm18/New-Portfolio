@@ -114,10 +114,10 @@ src/
 │   ├── Footer.tsx                # Rodapé com relógio em tempo real (BRT)
 │   ├── Header.tsx                # Navegação, controles de tema e idioma
 │   ├── Hero.tsx                  # Hero com posicionamento e stack principal
+│   ├── HeroPhotoFrame.tsx        # Moldura editorial da fotografia pessoal e mascote
 │   ├── Icons.tsx                 # Ícones vetoriais customizados
 │   ├── ProjectShowcaseCard.tsx   # Mockups de demonstração dos projetos
 │   ├── SelectedWork.tsx          # Apresentação objetiva dos projetos
-│   ├── TechCanvas.tsx            # Visualizador interativo de arquitetura
 │   └── TechStack.tsx             # Inventário categorizado de tecnologias
 ├── context/        # Estado global (Tema Dark/Light e Idioma PT/EN)
 ├── data/           # Fonte única de dados e dicionário de traduções
