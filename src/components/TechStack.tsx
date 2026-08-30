@@ -22,31 +22,31 @@ export const TechStack: React.FC = () => {
               {t.stack.sectionTitle}
             </h2>
           </div>
-          <p className="text-xs sm:text-sm font-mono text-primary-subtle mt-2 md:mt-0">
+          <p className="text-xs sm:text-sm font-mono text-primary-subtle mt-2 md:mt-0 max-w-md">
             {t.stack.sectionSubtitle}
           </p>
         </div>
 
-        {/* Visual Inventory Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Categorized Technical Inventory Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {skillCategories.map((category, idx) => (
             <div
-              key={category.title[language]}
-              className="bg-canvas-card border border-border-light rounded-xl p-5 space-y-4 shadow-subtle flex flex-col justify-between"
+              key={category.id}
+              className="bg-canvas-card border border-border-light rounded-xl p-6 space-y-5 shadow-subtle hover:border-accent/30 transition-colors flex flex-col justify-between"
             >
-              <div className="border-b border-border-light pb-2.5">
-                <span className="font-mono text-xs font-bold text-accent block">
+              <div className="border-b border-border-light pb-3">
+                <span className="font-mono text-xs font-bold text-accent block tracking-wider">
                   0{idx + 1} // {category.title[language]}
                 </span>
               </div>
 
-              <div className="flex flex-wrap gap-1.5 font-mono">
-                {category.skills.map((skill) => (
+              <div className="flex flex-wrap gap-2 font-mono">
+                {category.skills.map((skillName) => (
                   <span
-                    key={skill.name}
-                    className="bg-canvas-subtle border border-border-light px-2.5 py-1 rounded text-xs text-primary font-medium hover:border-accent/40 transition-colors"
+                    key={skillName}
+                    className="bg-canvas-subtle border border-border-light px-3 py-1.5 rounded-md text-xs sm:text-sm text-primary font-medium hover:border-accent/50 hover:text-accent transition-colors shadow-subtle"
                   >
-                    {skill.name}
+                    {skillName}
                   </span>
                 ))}
               </div>

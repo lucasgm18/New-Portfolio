@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { uiTranslations } from '../data/translations';
-import { developerBio } from '../data/portfolioData';
+import { developerProfile } from '../data/portfolioData';
 
 export const Header: React.FC = () => {
   const { language, setLanguage, theme, toggleTheme } = useApp();
@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'header-glass border-b border-border-light shadow-subtle py-3'
-          : 'bg-transparent py-6'
+          : 'bg-transparent py-5 sm:py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
               strokeLinejoin="round"
               aria-hidden="true"
             >
-              {/* Architectural geometric monogram: L + G structured form */}
+              {/* Monogram: L + G structured engineering form */}
               <path d="M5.5 4.5v14a1 1 0 0 0 1 1h12" />
               <path d="M18.5 9.5V6a1.5 1.5 0 0 0-1.5-1.5H11" />
               <path d="M12 13.5h6.5v4a1 1 0 0 1-1 1H14" />
@@ -50,21 +50,33 @@ export const Header: React.FC = () => {
           </div>
           <div>
             <span className="block font-bold tracking-tight text-primary text-base sm:text-lg leading-tight group-hover:text-accent transition-colors">
-              {developerBio.name}
+              {developerProfile.name}
             </span>
             <span className="block text-xs font-mono text-primary-subtle uppercase tracking-wider">
-              {developerBio.role[language]}
+              {developerProfile.role[language]}
             </span>
           </div>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+        <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
           <a
-            href="#work"
+            href="#about"
             className="text-sm font-medium text-primary-muted hover:text-primary transition-colors hover:translate-y-[-1px] duration-150 focus:outline-none focus:ring-1 focus:ring-accent rounded px-1"
           >
-            {t.nav.work}
+            {t.nav.about}
+          </a>
+          <a
+            href="#experience"
+            className="text-sm font-medium text-primary-muted hover:text-primary transition-colors hover:translate-y-[-1px] duration-150 focus:outline-none focus:ring-1 focus:ring-accent rounded px-1"
+          >
+            {t.nav.experience}
+          </a>
+          <a
+            href="#education"
+            className="text-sm font-medium text-primary-muted hover:text-primary transition-colors hover:translate-y-[-1px] duration-150 focus:outline-none focus:ring-1 focus:ring-accent rounded px-1"
+          >
+            {t.nav.education}
           </a>
           <a
             href="#stack"
@@ -73,10 +85,10 @@ export const Header: React.FC = () => {
             {t.nav.stack}
           </a>
           <a
-            href="#about"
+            href="#projects"
             className="text-sm font-medium text-primary-muted hover:text-primary transition-colors hover:translate-y-[-1px] duration-150 focus:outline-none focus:ring-1 focus:ring-accent rounded px-1"
           >
-            {t.nav.about}
+            {t.nav.work}
           </a>
           <a
             href="#contact"
@@ -89,9 +101,7 @@ export const Header: React.FC = () => {
           <div className="h-4 w-[1px] bg-border-light" />
           <div className="flex items-center space-x-2 bg-canvas-subtle border border-border-light px-2.5 py-1 rounded-full text-xs font-mono text-primary-muted">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="truncate max-w-[130px] lg:max-w-none">
-              {t.nav.status}
-            </span>
+            <span>{t.nav.status}</span>
           </div>
 
           {/* Language Switcher (PT-BR / EN-US) */}
@@ -132,8 +142,8 @@ export const Header: React.FC = () => {
           </button>
         </nav>
 
-        {/* Mobile Controls & Hamburger */}
-        <div className="md:hidden flex items-center space-x-2">
+        {/* Mobile / Tablet Controls & Hamburger */}
+        <div className="lg:hidden flex items-center space-x-2">
           
           {/* Mobile Language Switcher */}
           <div className="flex items-center bg-canvas-subtle border border-border-light rounded-md p-0.5 text-[11px] font-mono">
@@ -168,39 +178,53 @@ export const Header: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-canvas border-b border-border-light px-6 py-6 space-y-4 font-mono text-sm shadow-card animate-fadeIn">
+        <div className="lg:hidden bg-canvas border-b border-border-light px-6 py-6 space-y-3 font-mono text-sm shadow-card animate-fadeIn">
           <a
-            href="#work"
+            href="#about"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 border-b border-border-light text-primary hover:text-accent font-medium"
           >
-            01 // {t.nav.work.toUpperCase()}
+            01 // {t.nav.about.toUpperCase()}
+          </a>
+          <a
+            href="#experience"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 border-b border-border-light text-primary hover:text-accent font-medium"
+          >
+            02 // {t.nav.experience.toUpperCase()}
+          </a>
+          <a
+            href="#education"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 border-b border-border-light text-primary hover:text-accent font-medium"
+          >
+            03 // {t.nav.education.toUpperCase()}
           </a>
           <a
             href="#stack"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 border-b border-border-light text-primary hover:text-accent font-medium"
           >
-            02 // {t.nav.stack.toUpperCase()}
+            04 // {t.nav.stack.toUpperCase()}
           </a>
           <a
-            href="#about"
+            href="#projects"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 border-b border-border-light text-primary hover:text-accent font-medium"
           >
-            03 // {t.nav.about.toUpperCase()}
+            05 // {t.nav.work.toUpperCase()}
           </a>
           <a
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 border-b border-border-light text-primary hover:text-accent font-medium"
           >
-            04 // {t.nav.contact.toUpperCase()}
+            06 // {t.nav.contact.toUpperCase()}
           </a>
 
-          <div className="pt-2 flex items-center justify-between text-xs text-primary-subtle">
+          <div className="pt-3 flex items-center justify-between text-xs text-primary-subtle">
             <span>SYS.STATUS: ONLINE</span>
-            <span className="text-accent font-bold">{developerBio.location[language]}</span>
+            <span className="text-accent font-bold">{developerProfile.location[language]}</span>
           </div>
         </div>
       )}

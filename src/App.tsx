@@ -1,9 +1,11 @@
 import { AppProvider } from './context/AppContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { SelectedWork } from './components/SelectedWork';
-import { TechStack } from './components/TechStack';
 import { About } from './components/About';
+import { Experience } from './components/Experience';
+import { Education } from './components/Education';
+import { TechStack } from './components/TechStack';
+import { SelectedWork } from './components/SelectedWork';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -14,9 +16,11 @@ export function App() {
         <Header />
         <main className="flex-grow">
           <Hero />
-          <SelectedWork />
-          <TechStack />
           <About />
+          <Experience />
+          <Education />
+          <TechStack />
+          <SelectedWork />
           <Contact />
         </main>
         <Footer />

@@ -1,28 +1,28 @@
-import { DeveloperBio, Project, SkillCategory } from '../types/portfolio';
+import { DeveloperProfile, ExperienceItem, EducationItem, SkillCategory, Project } from '../types/portfolio';
 
-export const developerBio: DeveloperBio = {
+export const developerProfile: DeveloperProfile = {
   name: "Lucas Gomes",
   role: {
-    pt: "Desenvolvedor de Software",
+    pt: "Software Developer",
     en: "Software Developer"
   },
-  tagline: {
-    pt: "Desenvolvedor de software focado em aplicações web, ferramentas e sistemas.",
-    en: "Software developer focused on web applications, tools, and systems."
+  positioning: {
+    pt: "Software • Automação • Engenharia",
+    en: "Software • Automation • Engineering"
   },
   heroHeadline: {
-    pt: "Desenvolvo aplicações web, ferramentas e sistemas de software.",
-    en: "Building web applications, tools, and software systems."
+    pt: "Construo software e automações para transformar problemas complexos em ferramentas simples.",
+    en: "Building software and automations to turn complex problems into simple, reliable tools."
   },
   heroSubtext: {
-    pt: "Foco em código limpo, arquitetura desacoplada e entregas de alta performance.",
-    en: "Focused on clean code, decoupled architecture, and high-performance execution."
+    pt: "Desenvolvedor de software atuando no desenvolvimento de ferramentas técnicas, automações em C# e .NET e soluções voltadas para fluxos de engenharia.",
+    en: "Software developer building technical tools, C# and .NET automations, and software systems for engineering workflows."
   },
   status: {
     available: true,
     label: {
-      pt: "SYS.STATUS // DISPONÍVEL PARA PROJETOS",
-      en: "SYS.STATUS // AVAILABLE FOR NEW PROJECTS"
+      pt: "SYS.STATUS // DISPONÍVEL",
+      en: "SYS.STATUS // AVAILABLE"
     }
   },
   location: {
@@ -34,12 +34,14 @@ export const developerBio: DeveloperBio = {
   linkedin: "https://www.linkedin.com/in/lucasgmelo/",
   aboutText: {
     pt: [
-      "Desenvolvedor de software com experiência na construção de aplicações web, APIs e ferramentas de engenharia.",
-      "Atuo da modelagem de dados e arquitetura de backend à entrega de interfaces web rápidas, responsivas e manuteníveis."
+      "Sou desenvolvedor de software com atuação voltada para o desenvolvimento de software, automações e ferramentas técnicas para uma consultoria de engenharia civil.",
+      "No dia a dia, trabalho na resolução de problemas de engenharia através de código, construindo ferramentas e integrações para Civil 3D e Revit com C# e .NET, além de sistemas desacoplados, determinísticos e focados em usabilidade real.",
+      "Possuo curso técnico em Análise e Desenvolvimento de Sistemas e atualmente curso graduação tecnológica na mesma área, estando no 3º período."
     ],
     en: [
-      "Software developer with experience building web applications, APIs, and engineering tools.",
-      "Working from data modeling and backend architecture to responsive, fast, and maintainable user interfaces."
+      "I am a software developer working on software development, automations, and technical tools for a civil engineering consultancy.",
+      "Day to day, I solve practical engineering challenges through code, building tools and plugins for Civil 3D and Revit using C# and .NET, alongside decoupled, deterministic systems built for real-world usability.",
+      "I hold a technical diploma in Systems Analysis and Development and am currently pursuing an associate degree in the same field, currently in the 3rd semester."
     ]
   },
   principles: [
@@ -50,34 +52,129 @@ export const developerBio: DeveloperBio = {
         en: "Pragmatic Architecture"
       },
       description: {
-        pt: "Soluções diretas, modulares e sem abstrações desnecessárias.",
-        en: "Straightforward, modular solutions without unnecessary abstractions."
+        pt: "Soluções diretas, modulares e sem complexidade acidental.",
+        en: "Direct, modular solutions without accidental complexity."
       }
     },
     {
       number: "02",
       title: {
-        pt: "Determinismo & Estado",
-        en: "Determinism & State"
+        pt: "Automação & Ferramentas",
+        en: "Automation & Tooling"
       },
       description: {
-        pt: "Gerenciamento de estado previsível e persistência confiável.",
-        en: "Predictable state management and reliable persistence."
+        pt: "Transformação de processos manuais e complexos em ferramentas confiáveis.",
+        en: "Turning repetitive and complex processes into reliable tools."
       }
     },
     {
       number: "03",
       title: {
-        pt: "Clareza de Domínio",
-        en: "Domain Clarity"
+        pt: "Engenharia de Software",
+        en: "Software Engineering"
       },
       description: {
-        pt: "Compreensão direta das regras de negócio para entregar software funcional.",
-        en: "Direct understanding of business rules to deliver functional software."
+        pt: "Compreensão aprofundada das regras de domínio para entregar código manutenível.",
+        en: "Deep understanding of domain rules to deliver maintainable code."
       }
     }
   ]
 };
+
+export const workExperience: ExperienceItem[] = [
+  {
+    id: "civil-engineering-consultancy",
+    role: {
+      pt: "Software Developer",
+      en: "Software Developer"
+    },
+    companyType: {
+      pt: "Consultoria de Engenharia Civil",
+      en: "Civil Engineering Consultancy"
+    },
+    description: {
+      pt: "Atuação em desenvolvimento de software e automações para uma consultoria de engenharia civil, com foco na otimização e automação de fluxos técnicos.",
+      en: "Software and automation development for a civil engineering consultancy, focusing on optimization and automation of technical workflows."
+    },
+    scope: {
+      pt: [
+        "Desenvolvimento de automações em C# e ecossistema .NET",
+        "Desenvolvimento de ferramentas e utilitários para Civil 3D",
+        "Desenvolvimento de ferramentas e integrações para Revit",
+        "Desenvolvimento de software voltado para fluxos de engenharia"
+      ],
+      en: [
+        "Development of automations in C# and .NET ecosystem",
+        "Development of tools and utilities for Civil 3D",
+        "Development of tools and integrations for Revit",
+        "Development of software tailored for engineering workflows"
+      ]
+    },
+    technologies: ["C#", ".NET", "Civil 3D", "Revit", "PostgreSQL", "Azure", "AWS"]
+  }
+];
+
+export const educationHistory: EducationItem[] = [
+  {
+    id: "undergraduate-ads",
+    degreeType: {
+      pt: "Graduação Tecnológica",
+      en: "Associate Degree"
+    },
+    field: {
+      pt: "Análise e Desenvolvimento de Sistemas",
+      en: "Systems Analysis and Development"
+    },
+    status: {
+      pt: "Em andamento — 3º período",
+      en: "In progress — 3rd semester"
+    },
+    isCurrent: true
+  },
+  {
+    id: "technical-ads",
+    degreeType: {
+      pt: "Curso Técnico",
+      en: "Technical Diploma"
+    },
+    field: {
+      pt: "Análise e Desenvolvimento de Sistemas",
+      en: "Systems Analysis and Development"
+    },
+    status: {
+      pt: "Concluído",
+      en: "Completed"
+    },
+    isCurrent: false
+  }
+];
+
+export const skillCategories: SkillCategory[] = [
+  {
+    id: "core-stack",
+    title: {
+      pt: "CORE STACK",
+      en: "CORE STACK"
+    },
+    skills: ["C#", ".NET", "PostgreSQL", "Azure", "AWS"]
+  },
+  {
+    id: "engineering-tools",
+    title: {
+      pt: "ENGINEERING TOOLS",
+      en: "ENGINEERING TOOLS"
+    },
+    skills: ["Civil 3D", "Revit"]
+  },
+  {
+    id: "additional-technologies",
+    title: {
+      pt: "ADDITIONAL TECHNOLOGIES",
+      en: "ADDITIONAL TECHNOLOGIES"
+    },
+    skills: ["Docker", "Git", "TypeScript", "React"]
+  }
+];
 
 export const featuredProjects: Project[] = [
   {
@@ -85,91 +182,33 @@ export const featuredProjects: Project[] = [
     number: "PROJECT // 01",
     title: "Lucas Caixa Tech Trainer",
     subtitle: {
-      pt: "Plataforma de treinamento baseada em simulados e questões",
-      en: "Exam simulation and question bank platform"
+      pt: "Plataforma de simulados e banco de questões para exames de TI",
+      en: "Exam simulation and question bank platform for IT exams"
     },
     category: {
-      pt: "Plataforma Web / EdTech",
-      en: "Web Platform / EdTech"
+      pt: "Aplicação Web / Treinamento Técnico",
+      en: "Web Application / Technical Training"
     },
     shortDescription: {
-      pt: "Plataforma de treinamento baseada em simulados e banco de questões para exames bancários e certificações de TI.",
-      en: "Training platform based on exam simulations and question banks for financial and IT certification exams."
+      pt: "Plataforma web de simulados interativos e banco de questões categorizadas por disciplina com gerenciamento de estado e temporizador de prova.",
+      en: "Interactive web training platform featuring subject-categorized question banks, official exam timer, and responsive state management."
+    },
+    keyFeatures: {
+      pt: [
+        "Simulados com temporizador de exame",
+        "Banco de questões categorizado por disciplina",
+        "Persistência local de histórico de tentativas e desempenho"
+      ],
+      en: [
+        "Exam simulations with official countdown timer",
+        "Question bank categorized by domain subject",
+        "Local persistence for simulation history and progress"
+      ]
     },
     technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     githubUrl: "https://github.com/lucasgm18/lucas-caixa-tech-trainer",
     liveUrl: "https://lucas-caixa-tech-trainer.vercel.app/",
-    isLiveAvailable: true,
-    featuredImage: "caixa-tech-trainer",
-    mockupType: "dashboard",
-    metricsHighlight: {
-      pt: "Arquitetura Modular | Resposta Instantânea",
-      en: "Modular Architecture | Instant Response"
-    },
-    caseStudy: {
-      context: {
-        pt: "Aplicação desenvolvida para simulação de exames e treinamento técnico contínuo.",
-        en: "Application developed for exam simulation and continuous technical training."
-      },
-      problem: {
-        pt: "Bancos de questões monolíticos causam lentidão e perda de progresso durante trocas de matérias.",
-        en: "Monolithic question banks suffer from latency and progress loss during subject transitions."
-      },
-      solution: {
-        pt: "Arquitetura modular em React e TypeScript com separação de dados por domínio e persistência local.",
-        en: "Modular architecture in React and TypeScript with domain data separation and local persistence."
-      },
-      architectureDecisions: {
-        pt: [
-          "Estrutura modular de dados tipados por disciplina.",
-          "Camada de repositório para armazenamento de histórico.",
-          "Motor de avaliação de redação com critérios de bancas.",
-          "Componentes reutilizáveis focados em usabilidade."
-        ],
-        en: [
-          "Modular typed data structure per discipline.",
-          "Repository layer for simulation history storage.",
-          "Essay evaluator engine based on official criteria.",
-          "Reusable components focused on clean usability."
-        ]
-      },
-      keyFeatures: {
-        pt: [
-          "Simulados com temporizador oficial",
-          "Banco de questões categorizado por disciplina",
-          "Painel de acompanhamento de desempenho",
-          "Avaliador automático de redações"
-        ],
-        en: [
-          "Timed exam simulations",
-          "Question bank categorized by subject",
-          "Performance analytics dashboard",
-          "Automated essay evaluator"
-        ]
-      },
-      resultsAndMetrics: {
-        pt: "Aplicação funcional em produção na Vercel com respostas instantâneas.",
-        en: "Functional application deployed on Vercel with instant feedback."
-      },
-      codeSnippet: {
-        language: "typescript",
-        filename: "src/services/storage/progressRepository.ts",
-        code: `export class ProgressRepository {
-  private readonly STORAGE_KEY = 'caixa_trainer_progress_v1';
-
-  public async saveAttempt(attempt: SimulationAttempt): Promise<void> {
-    const history = await this.getHistory();
-    history.push(attempt);
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(history));
-  }
-
-  public async getHistory(): Promise<SimulationAttempt[]> {
-    const raw = localStorage.getItem(this.STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
-  }
-}`
-      }
-    }
+    isLiveAvailable: true
   },
   {
     id: "tower-of-lucas",
@@ -180,155 +219,29 @@ export const featuredProjects: Project[] = [
       en: "Turn-based tactical roguelike game with floor progression"
     },
     category: {
-      pt: "Jogo / Aplicação Interativa",
-      en: "Game / Interactive Software"
+      pt: "Software Interativo / Game Engine",
+      en: "Interactive Software / Game Engine"
     },
     shortDescription: {
-      pt: "Jogo roguelike tático baseado em turnos com sistema de gauntlet de andares e gerenciamento autoritativo de estado.",
-      en: "Turn-based tactical roguelike game featuring floor gauntlet progression and authoritative state management."
+      pt: "Jogo roguelike tático baseado em turnos desenvolvido com foco em código limpo, arquitetura desacoplada e gerenciamento autoritativo de estado de combate.",
+      en: "Turn-based tactical roguelike game built with clean code principles, decoupled architecture, and authoritative combat state management."
     },
-    technologies: ["TypeScript", "React", "Phaser.js", "SQLite", "Node.js"],
+    keyFeatures: {
+      pt: [
+        "Combate tático por turnos e encontros sequenciais",
+        "Progressão em gauntlet de 10 andares e batalha de chefes",
+        "Lógica de avaliação de combate desacoplada da camada de renderização"
+      ],
+      en: [
+        "Turn-based tactical combat and sequential encounters",
+        "10-floor gauntlet progression and boss battles",
+        "Combat evaluation logic decoupled from UI rendering"
+      ]
+    },
+    technologies: ["TypeScript", "React", "Phaser.js", "Node.js"],
     githubUrl: "https://github.com/lucasgm18/Tower-Of-Lucas",
-    // liveUrl is strictly omitted - Tower of Lucas has NO deploy URL
-    isLiveAvailable: false,
-    featuredImage: "tower-of-lucas",
-    mockupType: "browser",
-    metricsHighlight: {
-      pt: "Clean Code | Object Calisthenics",
-      en: "Clean Code | Object Calisthenics"
-    },
-    caseStudy: {
-      context: {
-        pt: "Projeto de jogo focado em mecânicas de combate por turnos e refatoração de código.",
-        en: "Game engineering project focused on turn-based combat mechanics and clean code patterns."
-      },
-      problem: {
-        pt: "Necessidade de isolar a lógica do motor de jogo da camada de interface para evitar estados inconsistentes.",
-        en: "Need to decouple game engine logic from UI components to prevent inconsistent state."
-      },
-      solution: {
-        pt: "Arquitetura em camadas com separação entre avaliação de combate e renderização gráfica.",
-        en: "Layered architecture separating combat evaluation from graphic rendering."
-      },
-      architectureDecisions: {
-        pt: [
-          "Aplicação de regras de Object Calisthenics.",
-          "Persistência desacoplada de dados de personagem.",
-          "Lógica de combate isolada em seletores puros.",
-          "Validação de progressão de andares com testes."
-        ],
-        en: [
-          "Application of Object Calisthenics rules.",
-          "Decoupled character data persistence.",
-          "Combat logic isolated into pure evaluators.",
-          "Floor progression validated with automated tests."
-        ]
-      },
-      keyFeatures: {
-        pt: [
-          "Combate tático por turnos",
-          "Gauntlet de 10 andares",
-          "Encontros sequenciais e Chefes",
-          "Gerenciamento autoritativo de estado"
-        ],
-        en: [
-          "Turn-based tactical combat",
-          "10-floor gauntlet progression",
-          "Sequential encounters and Boss fights",
-          "Authoritative state management"
-        ]
-      },
-      resultsAndMetrics: {
-        pt: "Código testado e documentado no GitHub com arquitetura limpa.",
-        en: "Tested and documented codebase on GitHub with clean architecture."
-      },
-      codeSnippet: {
-        language: "typescript",
-        filename: "src/engine/combat/FloorGauntletEvaluator.ts",
-        code: `export class FloorGauntletEvaluator {
-  private readonly MAX_FLOOR = 10;
-  private readonly MONSTERS_PER_FLOOR = 3;
-
-  public evaluateProgression(currentFloor: FloorState): ProgressionOutcome {
-    if (currentFloor.isBossFloor() && !currentFloor.isBossDefeated()) {
-      return ProgressionOutcome.locked("Derrote o Guardião para avançar.");
-    }
-    
-    return currentFloor.encountersCleared >= this.MONSTERS_PER_FLOOR
-      ? ProgressionOutcome.advanceToNextFloor()
-      : ProgressionOutcome.nextEncounter();
-  }
-}`
-      }
-    }
+    // Tower of Lucas strictly has NO live URL
+    isLiveAvailable: false
   }
 ];
 
-export const skillCategories: SkillCategory[] = [
-  {
-    title: {
-      pt: "Linguagens",
-      en: "Languages"
-    },
-    description: {
-      pt: "Linguagens de programação principais.",
-      en: "Core programming languages."
-    },
-    skills: [
-      { name: "Java" },
-      { name: "C#" },
-      { name: "TypeScript" },
-      { name: "JavaScript" },
-      { name: "SQL" }
-    ]
-  },
-  {
-    title: {
-      pt: "Frameworks & Runtimes",
-      en: "Frameworks & Runtimes"
-    },
-    description: {
-      pt: "Ecossistemas para web e APIs.",
-      en: "Web and API ecosystems."
-    },
-    skills: [
-      { name: "Spring Boot" },
-      { name: ".NET" },
-      { name: "React" },
-      { name: "Node.js" },
-      { name: "Vite" }
-    ]
-  },
-  {
-    title: {
-      pt: "Banco de Dados",
-      en: "Databases"
-    },
-    description: {
-      pt: "Sistemas de banco de dados.",
-      en: "Database systems."
-    },
-    skills: [
-      { name: "PostgreSQL" },
-      { name: "SQLite" },
-      { name: "JPA / Hibernate" },
-      { name: "Entity Framework" }
-    ]
-  },
-  {
-    title: {
-      pt: "Ferramentas",
-      en: "Tools"
-    },
-    description: {
-      pt: "Ferramentas e práticas de engenharia.",
-      en: "Engineering tools & practices."
-    },
-    skills: [
-      { name: "Git & GitHub" },
-      { name: "Docker" },
-      { name: "REST APIs" },
-      { name: "Arquitetura Limpa" }
-    ]
-  }
-];

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Copy, Check, ArrowUpRight } from 'lucide-react';
-import { developerBio } from '../data/portfolioData';
+import { developerProfile } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { useApp } from '../context/AppContext';
 import { uiTranslations } from '../data/translations';
@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText(developerBio.email);
+    navigator.clipboard.writeText(developerProfile.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -59,7 +59,7 @@ export const Contact: React.FC = () => {
 
                 <div className="flex items-center space-x-2">
                   <div className="flex-1 bg-canvas-subtle border border-border-light px-3.5 py-2.5 rounded-lg font-mono text-xs text-primary truncate select-all">
-                    {developerBio.email}
+                    {developerProfile.email}
                   </div>
                   <button
                     onClick={handleCopyEmail}
@@ -80,7 +80,7 @@ export const Contact: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 font-mono text-xs">
                   <a
-                    href={`mailto:${developerBio.email}`}
+                    href={`mailto:${developerProfile.email}`}
                     className="inline-flex items-center justify-center space-x-2 bg-canvas-subtle border border-border-light text-primary px-3.5 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
                     aria-label="Enviar email via cliente padrão"
                   >
@@ -90,7 +90,7 @@ export const Contact: React.FC = () => {
                   </a>
 
                   <a
-                    href={developerBio.github}
+                    href={developerProfile.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center space-x-2 bg-canvas-subtle border border-border-light text-primary px-3.5 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
@@ -102,7 +102,7 @@ export const Contact: React.FC = () => {
                   </a>
 
                   <a
-                    href={developerBio.linkedin}
+                    href={developerProfile.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center space-x-2 bg-canvas-subtle border border-border-light text-primary px-3.5 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent"

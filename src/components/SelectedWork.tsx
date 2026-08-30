@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { ExternalLink, ArrowRight, CheckCircle2 } from 'lucide-react';
+import React from 'react';
+import { ExternalLink, CheckCircle2 } from 'lucide-react';
 import { featuredProjects } from '../data/portfolioData';
-import { Project } from '../types/portfolio';
 import { ProjectShowcaseCard } from './ProjectShowcaseCard';
-import { ProjectDetailModal } from './ProjectDetailModal';
 import { GithubIcon } from './Icons';
 import { useApp } from '../context/AppContext';
 import { uiTranslations } from '../data/translations';
@@ -11,10 +9,9 @@ import { uiTranslations } from '../data/translations';
 export const SelectedWork: React.FC = () => {
   const { language } = useApp();
   const t = uiTranslations[language];
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="work" className="py-20 md:py-28 border-b border-border-light bg-canvas relative">
+    <section id="projects" className="py-20 md:py-28 border-b border-border-light bg-canvas relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -76,7 +73,7 @@ export const SelectedWork: React.FC = () => {
                       {t.work.keyFeatures}
                     </span>
                     <ul className="space-y-1.5 font-sans text-xs text-primary-muted">
-                      {project.caseStudy.keyFeatures[language].map((feature, fIdx) => (
+                      {project.keyFeatures[language].map((feature, fIdx) => (
                         <li key={fIdx} className="flex items-center space-x-2">
                           <CheckCircle2 size={13} className="text-accent flex-shrink-0" />
                           <span>{feature}</span>
@@ -104,37 +101,28 @@ export const SelectedWork: React.FC = () => {
 
                   {/* Links & Actions with strict hierarchy */}
                   <div className="pt-3 flex flex-wrap items-center gap-3">
-                    {/* Primary Action */}
-                    <button
-                      onClick={() => setSelectedProject(project)}
-                      className="group inline-flex items-center space-x-2 bg-primary text-canvas px-4 py-2 rounded-md text-xs font-mono font-medium hover:bg-accent hover:text-white transition-colors shadow-subtle focus:outline-none focus:ring-2 focus:ring-accent"
-                    >
-                      <span>{t.work.exploreCaseStudy}</span>
-                      <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-                    </button>
-
-                    {/* Secondary Action */}
+                    {/* Primary Action: GitHub */}
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-1.5 bg-canvas-card border border-border-light text-primary px-3.5 py-2 rounded-md text-xs font-mono hover:bg-canvas-subtle transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
+                      className="inline-flex items-center space-x-2 bg-primary text-canvas px-4 py-2.5 rounded-md text-xs font-mono font-medium hover:bg-accent hover:text-white transition-colors shadow-subtle focus:outline-none focus:ring-2 focus:ring-accent"
                       aria-label={`Ver repositório ${project.title} no GitHub`}
                     >
-                      <GithubIcon size={14} />
+                      <GithubIcon size={15} />
                       <span>{t.work.github}</span>
                     </a>
 
-                    {/* Terciary Action: ONLY render Live button if project.isLiveAvailable and project.liveUrl exist! */}
+                    {/* Secondary Action: ONLY render Live button if project.isLiveAvailable and project.liveUrl exist! */}
                     {project.isLiveAvailable && project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-1.5 border border-border-light text-primary-muted hover:text-accent bg-canvas-card px-3 py-2 rounded-md text-xs font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
+                        className="inline-flex items-center space-x-1.5 border border-border-light text-primary hover:text-accent bg-canvas-card px-4 py-2.5 rounded-md text-xs font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-accent shadow-subtle hover:border-accent/40"
                         aria-label={`Acessar projeto ${project.title} publicado`}
                       >
-                        <ExternalLink size={13} />
+                        <ExternalLink size={14} />
                         <span>{t.work.live}</span>
                       </a>
                     )}
@@ -150,7 +138,6 @@ export const SelectedWork: React.FC = () => {
                 >
                   <ProjectShowcaseCard
                     project={project}
-                    onOpenCaseStudy={() => setSelectedProject(project)}
                   />
                 </div>
               </article>
@@ -159,12 +146,6 @@ export const SelectedWork: React.FC = () => {
         </div>
 
       </div>
-
-      {/* Case Study Modal */}
-      <ProjectDetailModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
     </section>
   );
 };

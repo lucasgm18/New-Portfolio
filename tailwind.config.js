@@ -19,7 +19,7 @@ export default {
           DEFAULT: 'var(--accent-color)',
           hover: 'var(--accent-hover)',
           light: 'var(--accent-light)',
-          subtle: 'rgba(217, 68, 0, 0.1)',
+          subtle: 'rgba(99, 68, 212, 0.1)',
         },
         border: {
           light: 'var(--border-color)',

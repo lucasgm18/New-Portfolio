@@ -21,13 +21,13 @@ export const TechCanvas: React.FC = () => {
 
     window.addEventListener('resize', handleResize);
 
-    // Nodes representing actual layered software architecture
+    // Nodes representing layered engineering software & automation architecture
     const nodes = [
-      { x: 0.18, y: 0.28, label: "UI_COMPONENT", type: "primary" },
-      { x: 0.50, y: 0.22, label: "DOMAIN_LOGIC", type: "active" },
-      { x: 0.82, y: 0.36, label: "REPOSITORY", type: "storage" },
-      { x: 0.32, y: 0.68, label: "STATE_ENGINE", type: "active" },
-      { x: 0.68, y: 0.76, label: "DATA_STORE", type: "storage" },
+      { x: 0.18, y: 0.28, label: "PLUGIN_OR_UI", type: "primary" },
+      { x: 0.50, y: 0.22, label: "DOMAIN_ENGINE", type: "active" },
+      { x: 0.82, y: 0.36, label: "CAD_BIM_API", type: "storage" },
+      { x: 0.32, y: 0.68, label: "AUTOMATION_FLOW", type: "active" },
+      { x: 0.68, y: 0.76, label: "DATA_PERSISTENCE", type: "storage" },
     ];
 
     const connections = [
@@ -46,7 +46,7 @@ export const TechCanvas: React.FC = () => {
       const textColor = isDark ? "#a3a39c" : "#52525b";
       const nodeFill = isDark ? "#111215" : "#ffffff";
       const nodeStroke = isDark ? "#3d3e46" : "rgba(24, 24, 27, 0.2)";
-      const accentColor = isDark ? "#f25100" : "#c83d00";
+      const accentColor = isDark ? "#9d72ff" : "#6344d4";
 
       // Draw subtle background grid
       ctx.strokeStyle = gridColor;
@@ -122,8 +122,8 @@ export const TechCanvas: React.FC = () => {
       // HUD footer status
       ctx.font = "9px 'JetBrains Mono', monospace";
       ctx.fillStyle = isDark ? "#73736c" : "#71717a";
-      ctx.fillText("ARCHITECTURE // DECOUPLED", 14, height - 12);
-      ctx.fillText("STATUS // VERIFIED", width - 130, height - 12);
+      ctx.fillText("ENGINEERING // AUTOMATION", 14, height - 12);
+      ctx.fillText("STATUS // DETERMINISTIC", width - 150, height - 12);
 
       animationFrameId = requestAnimationFrame(render);
     };

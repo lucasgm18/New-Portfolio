@@ -1,14 +1,13 @@
 import React from 'react';
-import { ExternalLink, Layers, CheckCircle2 } from 'lucide-react';
+import { Layers, CheckCircle2 } from 'lucide-react';
 import { Project } from '../types/portfolio';
 import { useApp } from '../context/AppContext';
 
 interface ProjectShowcaseCardProps {
   project: Project;
-  onOpenCaseStudy: () => void;
 }
 
-export const ProjectShowcaseCard: React.FC<ProjectShowcaseCardProps> = ({ project, onOpenCaseStudy }) => {
+export const ProjectShowcaseCard: React.FC<ProjectShowcaseCardProps> = ({ project }) => {
   const { language } = useApp();
   const isCaixa = project.id === 'lucas-caixa-tech-trainer';
 
@@ -37,8 +36,8 @@ export const ProjectShowcaseCard: React.FC<ProjectShowcaseCardProps> = ({ projec
         </div>
       </div>
 
-      {/* Main Interactive Screen Showcase */}
-      <div className="p-4 sm:p-6 bg-canvas-card text-primary font-sans min-h-[300px] sm:min-h-[340px] flex flex-col justify-between relative overflow-hidden transition-colors">
+      {/* Main Screen Showcase */}
+      <div className="p-4 sm:p-6 bg-canvas-card text-primary font-sans min-h-[280px] sm:min-h-[320px] flex flex-col justify-between relative overflow-hidden transition-colors">
         
         {/* Ambient subtle lighting gradient */}
         <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-accent/5 dark:bg-accent/10 rounded-full blur-3xl pointer-events-none" />
@@ -163,13 +162,9 @@ export const ProjectShowcaseCard: React.FC<ProjectShowcaseCardProps> = ({ projec
             <span>{project.category[language]}</span>
           </div>
 
-          <button
-            onClick={onOpenCaseStudy}
-            className="text-xs font-mono text-primary hover:text-accent flex items-center space-x-1 underline underline-offset-4 decoration-border-hover hover:decoration-accent transition-colors focus:outline-none focus:ring-1 focus:ring-accent rounded p-0.5"
-          >
-            <span>{language === 'pt' ? 'Ver Detalhes Técnicos' : 'View Technical Details'}</span>
-            <ExternalLink size={12} />
-          </button>
+          <span className="text-xs font-mono text-primary-subtle">
+            {project.isLiveAvailable ? '⚡ Live Deploy' : '📦 GitHub Repository'}
+          </span>
         </div>
 
       </div>

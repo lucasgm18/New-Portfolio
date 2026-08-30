@@ -13,9 +13,9 @@
   --text-subtle: #71717a;       /* Subtle text with WCAG AA compliance */
   --border-color: rgba(24, 24, 27, 0.08); /* Precise subtle border */
   --border-hover: rgba(24, 24, 27, 0.18);
-  --accent-color: #c83d00;       /* Terracota / warm burnt orange */
-  --accent-hover: #aa3400;
-  --accent-light: #fbeee7;
+  --accent-color: #6344d4;       /* Cyber Purple Editorial */
+  --accent-hover: #5236b8;
+  --accent-light: #f3effc;
 }
 
 .dark {
@@ -29,9 +29,9 @@
   --text-subtle: #73736c;
   --border-color: #24252a;
   --border-hover: #3d3e46;
-  --accent-color: #f25100;
-  --accent-hover: #ff6719;
-  --accent-light: rgba(242, 81, 0, 0.15);
+  --accent-color: #9d72ff;       /* Cyber Purple Luminous */
+  --accent-hover: #b18eff;
+  --accent-light: rgba(157, 114, 255, 0.15);
 }
 
 @layer base {
