@@ -3,24 +3,25 @@
 # Lucas Gomes — Software Developer Portfolio
 
 <p align="center">
-  <strong>Portfólio de engenharia de software com foco em aplicações web de alta performance, ferramentas de desenvolvimento e arquitetura limpa.</strong>
+  <strong>Portfólio pessoal focado em desenvolvimento de software, automações em C# / .NET e ferramentas técnicas para fluxos de engenharia.</strong>
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/C%23-.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET" />
   <img src="https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-5.6-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-6344D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/ESLint-9.13-4B32C3?style=flat-square&logo=eslint&logoColor=white" alt="ESLint" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
 </p>
 
 ---
 
 [Visão Geral](#-visão-geral) •
-[Projetos em Destaque](#-projetos-em-destaque) •
+[Identidade Visual](#-identidade-visual--cyber-purple) •
 [Stack Tecnológica](#-stack-tecnológica) •
-[Arquitetura & Design](#-arquitetura--design-system) •
+[Projetos em Destaque](#-projetos-em-destaque) •
+[Estrutura do Projeto](#-estrutura-do-projeto) •
 [Como Rodar](#-como-rodar-o-projeto) •
 [Contato](#-contato)
 
@@ -30,13 +31,41 @@
 
 ## 🌐 Visão Geral
 
-Este projeto é o portfólio pessoal de **Lucas Gomes**, desenvolvido com uma estética **editorial, minimalista e técnica**. O design combina tipografia precisa (*Plus Jakarta Sans* e *JetBrains Mono*), grid milimetrado sutil, suporte nativo a **Light Mode** (com tom de papel marfim confortável) e **Dark Mode** de alto contraste, além de internacionalização completa (**PT-BR** e **EN-US**).
+Este repositório contém o portfólio pessoal de **Lucas Gomes**, desenvolvido com foco em **engenharia de software, automação de processos e design editorial**.
+
+O portfólio reflete a atuação prática em desenvolvimento de software e ferramentas técnicas para uma consultoria de engenharia civil, com ênfase em soluções diretas, código limpo e arquiteturas desacopladas.
 
 ### ✨ Destaques de Implementação:
-- **Design Editorial & Acessibilidade:** Cores calibradas em conformidade com o padrão **WCAG AA** para conforto prolongado de leitura.
-- **Internacionalização (i18n):** Alternância fluida e reativa entre Português e Inglês com persistência local.
-- **Painel Técnico no Hero:** Visualização interativa da arquitetura em camadas (`UI_COMPONENT`, `DOMAIN_LOGIC`, `REPOSITORY`, `STATE_ENGINE`, `DATA_STORE`).
-- **Ações Diretas em 1-Clique:** Cópia instantânea de email com feedback tátil e links diretos para plataformas de engenharia.
+- **Identidade Cyber Purple & Papel Editorial:** Paleta sofisticada com fundo em papel marfim (`#F7F5F0`) no Light Mode e Cyber Purple luminoso (`#9D72FF`) no Dark Mode.
+- **Arquitetura Orientada a Dados:** Separação estrita entre dados tipados (`portfolioData.ts`), traduções (`translations.ts`) e componentes de apresentação.
+- **Seções Dedicadas:** Apresentação clara de *Sobre*, *Experiência Profissional*, *Formação Acadêmica*, *Inventário Técnico*, *Projetos* e *Contato*.
+- **SEO Profissional & Acessibilidade:** JSON-LD Schema.org (`Person` & `WebSite`), meta tags Open Graph, Twitter metadata, `robots.txt` e `sitemap.xml`.
+- **Internacionalização (i18n):** Alternância completa entre **PT-BR** e **EN-US** com persistência no LocalStorage.
+- **Ações Rápidas em 1-Clique:** Cópia instantânea de email com feedback visual e links diretos para GitHub e LinkedIn.
+
+---
+
+## 🎨 Identidade Visual — Cyber Purple
+
+| Elemento | Light Mode | Dark Mode |
+|---|---|---|
+| **Background Principal** | `#F7F5F0` (Papel / Off-white) | `#090A0C` (Dark Canvas) |
+| **Superfície Secundária** | `#EDE9DF` (Warm Sand) | `#131417` (Deep Zinc) |
+| **Cards** | `#FFFFFF` (Crisp White) | `#111215` (Card Surface) |
+| **Texto Primário** | `#18181B` | `#F5F5F3` |
+| **Accent Principal** | `#6344D4` (Cyber Purple Editorial) | `#9D72FF` (Cyber Purple Luminoso) |
+
+---
+
+## 🛠️ Stack Tecnológica
+
+O inventário técnico é organizado por contexto de aplicação:
+
+```text
+├── CORE STACK:              C#, .NET, PostgreSQL, Azure, AWS
+├── ENGINEERING TOOLS:       Civil 3D, Revit
+└── ADDITIONAL TECHNOLOGIES: Docker, Git, TypeScript, React
+```
 
 ---
 
@@ -46,24 +75,22 @@ Este projeto é o portfólio pessoal de **Lucas Gomes**, desenvolvido com uma es
   <tr>
     <td width="50%" valign="top">
       <h3>01 // Lucas Caixa Tech Trainer</h3>
-      <p>Plataforma web de treinamento contínuo com simulados temporizados e banco de questões estruturado por disciplinas para exames e certificações técnicas.</p>
+      <p>Plataforma web interativa de simulados temporizados e banco de questões estruturado por disciplinas para exames e certificações de TI.</p>
       <ul>
-        <li><strong>Arquitetura:</strong> Modular em React + TypeScript com separação por domínio.</li>
-        <li><strong>Diferencial:</strong> Persistência local e motor de avaliação instantâneo.</li>
+        <li><strong>Destaques:</strong> Temporizador de exame, persistência local de tentativas e navegação por disciplinas.</li>
         <li><strong>Stack:</strong> React • TypeScript • Vite • Tailwind CSS</li>
       </ul>
       <p>
         <a href="https://github.com/lucasgm18/lucas-caixa-tech-trainer"><b>🔗 Repositório GitHub</b></a> •
-        <a href="https://lucas-caixa-tech-trainer.vercel.app/"><b>🚀 Ver Projeto (Live)</b></a>
+        <a href="https://lucas-caixa-tech-trainer.vercel.app/"><b>⚡ Ver Projeto (Live)</b></a>
       </p>
     </td>
     <td width="50%" valign="top">
       <h3>02 // Tower of Lucas</h3>
-      <p>Jogo tático roguelike baseado em turnos com progressão por andares (gauntlet), regras de combate isoladas e gerenciamento autoritativo de estado.</p>
+      <p>Jogo roguelike tático baseado em turnos com progressão em gauntlet de 10 andares e gerenciamento determinístico de combate.</p>
       <ul>
-        <li><strong>Arquitetura:</strong> Camadas desacopladas guiadas por <em>Object Calisthenics</em>.</li>
-        <li><strong>Diferencial:</strong> Motor de combate isolado em seletores puros e testes automatizados.</li>
-        <li><strong>Stack:</strong> TypeScript • React • Phaser.js • SQLite • Node.js</li>
+        <li><strong>Destaques:</strong> Combate tático por turnos, encontros de chefes e lógica de motor isolada da camada gráfica.</li>
+        <li><strong>Stack:</strong> TypeScript • React • Phaser.js • Node.js</li>
       </ul>
       <p>
         <a href="https://github.com/lucasgm18/Tower-Of-Lucas"><b>🔗 Repositório GitHub</b></a>
@@ -74,42 +101,29 @@ Este projeto é o portfólio pessoal de **Lucas Gomes**, desenvolvido com uma es
 
 ---
 
-## 🛠️ Stack Tecnológica
-
-```text
-├── Linguagens:            Java, C#, TypeScript, JavaScript, SQL
-├── Frameworks & Runtimes: Spring Boot, .NET, React, Node.js, Vite
-├── Banco de Dados:        PostgreSQL, SQLite, JPA / Hibernate, Entity Framework
-└── Práticas & DevOps:     Docker, REST APIs, Git & GitHub, Clean Architecture
-```
-
----
-
-## 📐 Arquitetura & Design System
-
-A aplicação foi estruturada com foco em modularidade, separação estrita de responsabilidades e manutenibilidade:
+## 📐 Estrutura do Projeto
 
 ```text
 src/
-├── assets/         # Recursos estáticos e vetores
 ├── components/     # Componentes modulares de UI
-│   ├── About.tsx                 # Seção Sobre e Princípios
+│   ├── About.tsx                 # Seção Sobre e diretrizes de engenharia
 │   ├── Contact.tsx               # Contato com cópia rápida e links diretos
+│   ├── Education.tsx             # Formação acadêmica e status atual
+│   ├── Experience.tsx            # Experiência em consultoria de engenharia
 │   ├── Footer.tsx                # Rodapé com relógio em tempo real (BRT)
-│   ├── Header.tsx                # Barra de navegação, monograma e controles
-│   ├── Hero.tsx                  # Hero editorial com métricas técnicas
+│   ├── Header.tsx                # Navegação, controles de tema e idioma
+│   ├── Hero.tsx                  # Hero com posicionamento e stack principal
 │   ├── Icons.tsx                 # Ícones vetoriais customizados
-│   ├── ProjectDetailModal.tsx    # Modal aprofundado com Case Study e snippets
-│   ├── ProjectShowcaseCard.tsx   # Mockups adaptativos aos temas Light/Dark
-│   ├── SelectedWork.tsx          # Apresentação escaneável dos projetos
+│   ├── ProjectShowcaseCard.tsx   # Mockups de demonstração dos projetos
+│   ├── SelectedWork.tsx          # Apresentação objetiva dos projetos
 │   ├── TechCanvas.tsx            # Visualizador interativo de arquitetura
-│   └── TechStack.tsx             # Inventário visual da stack tecnológica
+│   └── TechStack.tsx             # Inventário categorizado de tecnologias
 ├── context/        # Estado global (Tema Dark/Light e Idioma PT/EN)
-├── data/           # Fonte única de dados dos projetos e traduções
+├── data/           # Fonte única de dados e dicionário de traduções
 │   ├── portfolioData.ts
 │   └── translations.ts
 ├── types/          # Tipagem estrita TypeScript (interfaces e modelos)
-├── index.css       # Design tokens, paleta de cores e dot grid
+├── index.css       # Design tokens, paleta Cyber Purple e dot grid
 └── main.tsx        # Ponto de entrada da aplicação React
 ```
 
@@ -148,5 +162,5 @@ Abra [http://localhost:5173](http://localhost:5173) no seu navegador.
 ---
 
 <div align="center">
-  <sub>Desenvolvido com precisão por <strong>Lucas Gomes</strong>. Distribuído sob a licença MIT.</sub>
+  <sub>Desenvolvido por <strong>Lucas Gomes</strong>. Distribuído sob a licença MIT.</sub>
 </div>
