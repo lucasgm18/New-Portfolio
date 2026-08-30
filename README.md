@@ -36,7 +36,7 @@ Este repositório contém o portfólio pessoal de **Lucas Gomes**, desenvolvido 
 O portfólio reflete a atuação prática em desenvolvimento de software e ferramentas técnicas para uma consultoria de engenharia civil, com ênfase em soluções diretas, código limpo e arquiteturas desacopladas.
 
 ### ✨ Destaques de Implementação:
-- **Identidade Cyber Purple & Papel Editorial:** Paleta sofisticada com fundo em papel marfim (`#F7F5F0`) no Light Mode e Cyber Purple luminoso (`#9D72FF`) no Dark Mode.
+- **Design System Dual:** Light Mode com estética técnica e natural (oliva suave `#E8E8D8`, creme `#F3F0E3` e bronze `#8A7651`) e Dark Mode de alto contraste com Cyber Purple luminoso (`#9D72FF`).
 - **Arquitetura Orientada a Dados:** Separação estrita entre dados tipados (`portfolioData.ts`), traduções (`translations.ts`) e componentes de apresentação.
 - **Seções Dedicadas:** Apresentação clara de *Sobre*, *Experiência Profissional*, *Formação Acadêmica*, *Inventário Técnico*, *Projetos* e *Contato*.
 - **SEO Profissional & Acessibilidade:** JSON-LD Schema.org (`Person` & `WebSite`), meta tags Open Graph, Twitter metadata, `robots.txt` e `sitemap.xml`.
@@ -45,15 +45,16 @@ O portfólio reflete a atuação prática em desenvolvimento de software e ferra
 
 ---
 
-## 🎨 Identidade Visual — Cyber Purple
+## 🎨 Identidade Visual
 
-| Elemento | Light Mode | Dark Mode |
+| Elemento | Light Mode (Editorial / Natural) | Dark Mode (Cyber Graphite) |
 |---|---|---|
-| **Background Principal** | `#F7F5F0` (Papel / Off-white) | `#090A0C` (Dark Canvas) |
-| **Superfície Secundária** | `#EDE9DF` (Warm Sand) | `#131417` (Deep Zinc) |
-| **Cards** | `#FFFFFF` (Crisp White) | `#111215` (Card Surface) |
-| **Texto Primário** | `#18181B` | `#F5F5F3` |
-| **Accent Principal** | `#6344D4` (Cyber Purple Editorial) | `#9D72FF` (Cyber Purple Luminoso) |
+| **Background Principal** | `#E8E8D8` (Oliva suave / Papel técnico) | `#090A0C` (Dark Canvas) |
+| **Superfície Secundária** | `#DCDDCC` (Warm Olive / Sand) | `#131417` (Deep Zinc) |
+| **Cards** | `#F3F0E3` (Creme quente) | `#111215` (Card Surface) |
+| **Texto Primário** | `#3F4034` (Grafite com influência oliva) | `#F5F5F3` (Crisp Light) |
+| **Texto Secundário** | `#666754` (Olive Slate) | `#A3A39C` (Muted Zinc) |
+| **Accent Principal** | `#8A7651` (Bronze / Areia / Terracota) | `#9D72FF` (Cyber Purple Luminoso) |
 
 ---
 

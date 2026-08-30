@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --bg-canvas: #f7f5f0;          /* Modern editorial paper off-white */
-  --bg-canvas-subtle: #ede9df;   /* Secondary warm surface */
-  --bg-canvas-card: #ffffff;     /* Crisp clean card */
+  --bg-canvas: #e8e8d8;          /* Soft desaturated olive/sand background */
+  --bg-canvas-subtle: #dcddcc;   /* Secondary warm olive/sand surface */
+  --bg-canvas-card: #f3f0e3;     /* Warm cream card surface */
   --bg-canvas-dark-block: #121316;
   --bg-canvas-dark-card: #18191e;
-  --text-primary: #18181b;       /* Deep graphite text */
-  --text-muted: #52525b;        /* Readable warm zinc text */
-  --text-subtle: #71717a;       /* Subtle text with WCAG AA compliance */
-  --border-color: rgba(24, 24, 27, 0.08); /* Precise subtle border */
-  --border-hover: rgba(24, 24, 27, 0.18);
-  --accent-color: #6344d4;       /* Cyber Purple Editorial */
-  --accent-hover: #5236b8;
-  --accent-light: #f3effc;
+  --text-primary: #3f4034;       /* Deep graphite with warm olive influence */
+  --text-muted: #666754;        /* Readable olive-slate secondary text */
+  --text-subtle: #777864;       /* Soft technical monospace / micro text */
+  --border-color: rgba(63, 64, 52, 0.12); /* Discreet natural border */
+  --border-hover: rgba(63, 64, 52, 0.24);
+  --accent-color: #8a7651;       /* Desaturated sand/bronze/warm terracotta accent */
+  --accent-hover: #736242;
+  --accent-light: rgba(138, 118, 81, 0.12);
 }
 
 .dark {
@@ -51,7 +51,7 @@
 
 /* Technical dot background pattern - subtle editorial paper texture */
 .bg-grid-dots {
-  background-image: radial-gradient(rgba(24, 24, 27, 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(63, 64, 52, 0.07) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -77,7 +77,7 @@
 
 /* Glass effect for header */
 .header-glass {
-  background-color: rgba(247, 245, 240, 0.88);
+  background-color: rgba(232, 232, 216, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }

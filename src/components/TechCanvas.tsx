@@ -41,12 +41,12 @@ export const TechCanvas: React.FC = () => {
       ctx.clearRect(0, 0, width, height);
 
       // Grid colors
-      const gridColor = isDark ? "rgba(255, 255, 255, 0.04)" : "rgba(24, 24, 27, 0.04)";
-      const lineDashColor = isDark ? "rgba(255, 255, 255, 0.14)" : "rgba(24, 24, 27, 0.12)";
-      const textColor = isDark ? "#a3a39c" : "#52525b";
-      const nodeFill = isDark ? "#111215" : "#ffffff";
-      const nodeStroke = isDark ? "#3d3e46" : "rgba(24, 24, 27, 0.2)";
-      const accentColor = isDark ? "#9d72ff" : "#6344d4";
+      const gridColor = isDark ? "rgba(255, 255, 255, 0.04)" : "rgba(63, 64, 52, 0.05)";
+      const lineDashColor = isDark ? "rgba(255, 255, 255, 0.14)" : "rgba(63, 64, 52, 0.14)";
+      const textColor = isDark ? "#a3a39c" : "#666754";
+      const nodeFill = isDark ? "#111215" : "#f3f0e3";
+      const nodeStroke = isDark ? "#3d3e46" : "rgba(63, 64, 52, 0.22)";
+      const accentColor = isDark ? "#9d72ff" : "#8a7651";
 
       // Draw subtle background grid
       ctx.strokeStyle = gridColor;
@@ -121,7 +121,7 @@ export const TechCanvas: React.FC = () => {
 
       // HUD footer status
       ctx.font = "9px 'JetBrains Mono', monospace";
-      ctx.fillStyle = isDark ? "#73736c" : "#71717a";
+      ctx.fillStyle = isDark ? "#73736c" : "#777864";
       ctx.fillText("ENGINEERING // AUTOMATION", 14, height - 12);
       ctx.fillText("STATUS // DETERMINISTIC", width - 150, height - 12);
 
